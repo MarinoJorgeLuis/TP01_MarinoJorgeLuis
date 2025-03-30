@@ -1,0 +1,142 @@
+* {
+    padding: 0;
+    margin: 0;
+    text-decoration: none;
+    font-family: 'Poppins', sans-serif;
+    list-style: none;
+    box-sizing: border-box;
+}
+
+h2 {
+    margin: 20px 0;
+    font-size: 30px;
+    overflow: auto;
+}
+
+/*Parrafo e imagen*/
+p {
+    margin: 5px;
+    font-size: 15px;
+    text-align: justify;
+}
+img {
+    float:right;
+    width:500px;
+    margin:5px;
+}
+.contenedorp {
+    max-width: 1000px;
+}
+
+
+/*Barra de navegación*/
+nav {
+    background: #0082e6;
+    height: 80px;
+    width: 100%;
+}
+
+label.bandera {
+    color: white;
+    font-size: 35px;
+    line-height: 80px;
+    padding: 0 20px;
+    font-weight: bold;
+}
+
+nav ul {
+    float: right;
+    margin-right: 20px;
+}
+
+nav ul li{
+    display: inline-block;
+    line-height: 80px;
+    margin: 0 5px;
+}
+nav ul li a {
+    color: white;
+    font-size: 17px;
+    padding: 7px 13px;
+    border-radius: 3px;
+    text-transform: uppercase;
+}
+
+a.active, a:hover {
+    background: #1b9bff;
+    transition: .5s;
+}
+
+.checkbtn {
+    font-size: 30px;
+    color: white;
+    float: right;
+    line-height: 80px;
+    margin-right: 40px;
+    cursor: pointer;
+    display: none;
+}
+
+#check {
+    display: none;
+}
+
+@media (max-width: 952px) {
+    /*label.bandera {
+        font-size: 30px;
+        padding-left: 50px;
+    }*/
+
+    nav ul li a {
+        font-size: 16px;
+    }
+}
+
+@media (max-width: 755px) { /*Cuando la pantalla sea menor a 868px*/
+    main {
+        padding-top: 80px; /*Para que no se oculte parte del contenido lo ajustamos con line-height: 80px del label*/
+    }
+    .checkbtn { /*Para que se muestre el label*/
+        display: block;
+    }
+
+    nav {
+        position: fixed; /*Para que se quede fijo en la parte superior y se muestre siempre aunque hagamos scroll*/
+    }
+
+    ul {
+        position: fixed;
+        width: 100%;
+        height: 100vh;
+        background: #2c3e50;
+        top: 80px;
+        left: -200%; /*Para que no se muestre la etiqueta ul y todo su contenido al llegar a cierta anchura*/
+        text-align: center;
+        transition: all .5s;
+    }
+
+    nav ul li {
+        display: block;
+        margin: 50px 0;
+        line-height: 30px;
+    }
+
+    nav ul li a {
+        font-size: 20px;
+    }
+
+    a:hover, a.active {
+        background: none;
+        color: #0082e6;
+    }
+
+    #check:checked ~ ul {
+        left: 0; /*Para que se muestre la etiqueta ul y todo su contenido al marcar la casilla del checkbox*/
+    }
+}
+
+@media (max-width: 300px) {
+    label.bandera {
+        display: none;
+    }
+}
