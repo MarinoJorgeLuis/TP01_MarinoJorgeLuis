@@ -8,26 +8,34 @@
 }
 
 h2 {
-    margin: 20px 0;
+    margin: 20px;
     font-size: 30px;
-    overflow: auto;
 }
 
 /*Parrafo e imagen*/
 p {
-    margin: 5px;
+    margin: 20px;
     font-size: 15px;
-    text-align: justify;
+    text-align: justify; /*Para que el texto se acomode a la izquierda y derecha*/
 }
 img {
     float:right;
-    width:500px;
-    margin:5px;
+    width:500px; /*Para que la imagen no ocupe todo el ancho de la pantalla*/
+    margin: 25px;
 }
-.contenedorp {
-    max-width: 1000px;
+.imghist{
+    width: 300px;
+}
+.imgvest{
+    width: 200px;
 }
 
+/*Contenedor principal*/
+main {
+    display: grid;  /*Para que el contenido se acomode en columnas*/
+    grid-template-columns: 1fr; /*Seteamos a una columna*/
+    grid-gap: 10px; /*Espacio entre columnas*/
+}
 
 /*Barra de navegación*/
 nav {
@@ -59,10 +67,10 @@ nav ul li a {
     font-size: 17px;
     padding: 7px 13px;
     border-radius: 3px;
-    text-transform: uppercase;
+    text-transform: uppercase; /*Para que el texto esté en mayúscula*/
 }
 
-a.active, a:hover {
+a:hover {
     background: #1b9bff;
     transition: .5s;
 }
@@ -81,6 +89,10 @@ a.active, a:hover {
     display: none;
 }
 
+
+
+
+
 @media (max-width: 952px) {
     /*label.bandera {
         font-size: 30px;
@@ -95,6 +107,10 @@ a.active, a:hover {
 @media (max-width: 755px) { /*Cuando la pantalla sea menor a 868px*/
     main {
         padding-top: 80px; /*Para que no se oculte parte del contenido lo ajustamos con line-height: 80px del label*/
+    }
+    img {
+        width: 400px; /*Para que la imagen no ocupe todo el ancho de la pantalla*/
+        margin: 10px;
     }
     .checkbtn { /*Para que se muestre el label*/
         display: block;
@@ -125,7 +141,7 @@ a.active, a:hover {
         font-size: 20px;
     }
 
-    a:hover, a.active {
+    a:hover {
         background: none;
         color: #0082e6;
     }
@@ -139,4 +155,35 @@ a.active, a:hover {
     label.bandera {
         display: none;
     }
+}
+
+/*Estilos del footer*/
+.footer {
+    background-color: #0082e6;
+    width: 100%;
+    position: auto; 
+    bottom: 0; /* Alinea el footer al fondo de la página */
+}
+
+.footer-bottom > p{
+    color: white;
+    text-align: center;
+    padding: 10px 0;
+    margin: 0;
+    font-size: 14px;
+    font-family: 'Poppins', sans-serif;
+}
+.pages > li > a {
+    background-color: #0082e6;
+    color:#ffffff;
+}
+
+.pages > li> a:hover , a:hover {
+    background-color: #e6a900;
+    color:#ffffff;
+}
+
+.footer-content > ul li a {
+    list-style:disc;
+    margin: 15px;
 }

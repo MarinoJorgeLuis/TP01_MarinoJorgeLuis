@@ -1,0 +1,76 @@
+body {
+    padding: 0;
+    margin: 0;
+    text-decoration: none;
+    font-family: 'Poppins', sans-serif;
+    list-style: none;
+    box-sizing: border-box;
+    background: #bd59ff;
+}
+
+header h1 {
+    text-align: center;
+    font-size: 30px;
+}
+table {
+    margin: 20px auto; /* Centra la tabla horizontalmente con respecto al body */
+    border: 1px solid black;
+    border-collapse: collapse; /* Para que no se vea el espacio entre las celdas */
+    padding: 10px;
+    text-align: center;
+}
+table, th, td {
+    border: 1px solid black;
+    border-collapse: collapse; /*Para que no se vea el espacio entre las celdas*/
+    padding: 10px;
+    text-align: center;
+}
+
+td, a {
+    background-color: white;
+    text-decoration: none;
+}
+h1 {
+    background-color: rgb(118, 118, 248);
+    border: 1px dashed rgb(255, 255, 255);
+    text-shadow: #ffffff 1px 1px 2px; /* Sombra del texto */
+}
+/* Coloreo de las cabeceras de la tabla */
+th {
+    background-color: #f4b400; /* Color de fondo para las cabeceras */
+    color: white; /* Color del texto */
+    padding: 10px;
+    text-shadow: black 1px 1px 2px; /* Sombra del texto */
+}
+
+/* Colorear la primera columna de la tabla */
+td:first-child {
+    background-color: #f4b400; /* Color de fondo para la primera columna */
+    font-weight: bold; /* Hace el texto en negrita */
+    padding: 10px;
+}
+/*Estilos del footer*/
+.footer {
+    background-color: #0082e6;
+    width: 100%;
+    position:fixed; /* Fija el footer al final de la página */
+    bottom: 0; /* Alinea el footer al fondo de la página */
+}
+
+.footer-bottom > p{
+    color: white;
+    text-align: center;
+    padding: 10px 0;
+    margin: 0;
+    font-size: 14px;
+    font-family: 'Poppins', sans-serif;
+}
+.pages > li > a {
+    background-color: #0082e6;
+    color:#ffffff;
+}
+
+.pages > li> a:hover , a:hover {
+    background-color: #e6a900;
+    color:#ffffff;
+}
